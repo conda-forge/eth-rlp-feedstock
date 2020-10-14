@@ -1,5 +1,5 @@
 {% set name = "eth-rlp" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: da86c4a180e9df434d6e4c993486bff8e96c51da39c06fc1c9e8748044dc9c0c
+  sha256: f016f980b0ed42ee7650ba6e4e4d3c4e9aa06d8b9c6825a36d3afe5aa0187a8b
 
 build:
   number: 0
