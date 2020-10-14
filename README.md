@@ -5,11 +5,9 @@ Home: https://github.com/ethereum/eth-rlp
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/eth-rlp-feedstock/blob/master/LICENSE.txt)
 
 Summary: eth-rlp: RLP definitions for common Ethereum objects in Python
-
-
 
 Current build status
 ====================
