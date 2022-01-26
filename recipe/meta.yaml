@@ -1,5 +1,5 @@
 {% set name = "eth-rlp" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f016f980b0ed42ee7650ba6e4e4d3c4e9aa06d8b9c6825a36d3afe5aa0187a8b
+  sha256: f3263b548df718855d9a8dbd754473f383c0efc82914b0b849572ce3e06e71a6
 
 build:
   number: 0
@@ -18,13 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5,<4.0
+    - python >=3.6,<4.0
     - setuptools-markdown
   run:
-    - eth-utils >=1.0.1,<2
+    - python >=3.6,<4.0
+    - eth-utils >=2.0.0,<3
     - hexbytes >=0.1.0,<1
-    - python >=3.5,<4.0
-    - rlp >=0.6.0,<2
+    - rlp >=3.0.0,<4
 
 test:
   imports:
