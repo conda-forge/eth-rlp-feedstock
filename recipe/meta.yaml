@@ -24,7 +24,7 @@ requirements:
     - python >=3.6,<4.0
     - eth-utils >=2.0.0,<3
     - hexbytes >=0.1.0,<1
-    - rlp >=0.6.0,<2
+    - rlp >=3.0.0,<4
 
 test:
   imports:
