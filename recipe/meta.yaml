@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.6,<4.0
     - setuptools-markdown
   run:
+    - python >=3.6,<4.0
     - eth-utils >=2.0.0,<3
     - hexbytes >=0.1.0,<1
-    - python >=3.6
     - rlp >=0.6.0,<2
 
 test:
