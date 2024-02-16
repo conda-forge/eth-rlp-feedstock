@@ -1,5 +1,5 @@
 {% set name = "eth-rlp" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a988d713a36452e7c6da71186798343f687eaf3aeb7f99266750dd9e1f754c7b
+  sha256: d61dbda892ee1220f28fb3663c08f6383c305db9f1f5624dc585c9cd05115027
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - eth-utils >=2.0.0
     - hexbytes >=0.1.0,<1
     - rlp >=0.6.0
+    - typing_extensions >=4.0.1  # py<=3.11
 
 test:
   imports:
@@ -39,7 +40,7 @@ about:
   summary: 'eth-rlp: RLP definitions for common Ethereum objects in Python'
   license: MIT
   license_file: LICENSE
-
+        
 extra:
   recipe-maintainers:
     - step21
