@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d5b408a8cd20ed496e8e66d0559560d29bc21cee482f893936a1f05d0dddc4a0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - setuptools-markdown
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - eth-utils >=2.0.0
     - hexbytes >=1.2.0
     - rlp >=0.6.0
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ethereum/eth-rlp
