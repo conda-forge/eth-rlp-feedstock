@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - setuptools
+    - setuptools-scm
     - python {{ python_min }}
     - setuptools-markdown
   run:
