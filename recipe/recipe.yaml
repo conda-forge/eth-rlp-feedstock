@@ -17,8 +17,13 @@ build:
   noarch: python
   script:
     env:
-      SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }} 
-    content: ${{ PYTHON }} -m pip install . -vv
+      SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
+    content:
+      - ${{ PYTHON }} -m pip install . -vv
+      - if: unix
+        then: rm -rf $SP_DIR/docs
+      - if: win
+        then: rmdir /s /q %SP_DIR%\docs
 
 requirements:
   host:
