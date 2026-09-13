@@ -11,9 +11,13 @@ source:
   sha256: 5e4b2eb1b8213e303d6a232dfe35ab8c29e2d3051b86e8d359def80cd21db83d
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+      - export SETUPTOOLS_SCM_PRETEND_VERSION="{{ version }}"
+      - python -m pip install . -vv
+      - rm -rf ${SP_DIR}/docs   # [unix]
+      - rmdir /s /q %SP_DIR%\docs   # [win]
 
 requirements:
   host:
